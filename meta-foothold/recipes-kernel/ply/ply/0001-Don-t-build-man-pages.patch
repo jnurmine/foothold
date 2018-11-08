@@ -1,0 +1,26 @@
+From 1b0ec6275ddea3b28fb5db8d6032b0b76543ab82 Mon Sep 17 00:00:00 2001
+From: Slinky <slinky@iki.fi>
+Date: Sat, 10 Nov 2018 22:08:36 +0100
+Subject: Don't build man pages
+
+We don't have "ronn" and don't want to add a recipe for it, so avoid
+building man pages entirely.
+
+Signed-off-by: Slinky <slinky@iki.fi>
+---
+ Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 094455f..b03c2f3 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -1,4 +1,4 @@
+-SUBDIRS         = include lib man src
++SUBDIRS         = include lib src
+ doc_DATA        = README.md COPYING
+ EXTRA_DIST      = CHANGELOG.md README.md
+ DISTCLEANFILES  = *~ *.d
+-- 
+2.7.4
+
