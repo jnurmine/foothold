@@ -29,8 +29,9 @@ LICENSE = "GPLv2"
 
 LIC_FILES_CHKSUM = "${@ \
     "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814" if \
-    (int(d.getVar("LINUX_VERSION").split(".")[0]) == 4) and \
-    (int(d.getVar("LINUX_VERSION").split(".")[1]) >= 16) \
+    ((int(d.getVar("LINUX_VERSION").split(".")[0]) == 4) and \
+    (int(d.getVar("LINUX_VERSION").split(".")[1]) >= 16)) or \
+    (int(d.getVar("LINUX_VERSION").split(".")[0]) >= 5) \
     else \
     "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"}"
 
@@ -75,6 +76,9 @@ SRC_URI_append = " file://defconfig"
 # We don't have this file, but do have printk in defconfig
 KERNEL_FEATURES_remove = " features/debug/printk.scc"
 
+# We don't want these fragments either
+KERNEL_FEATURES_remove += " features/kernel-sample/kernel-sample.scc"
+
 # We are completely overriding the kernel with a potentially newer one.
 # This means the kernel headers will differ and if nothing is done, e.g.
 # LINUX_VERSION_CODE will match that of Yocto, not our kernel. For some
@@ -91,3 +95,4 @@ sysroot_stage_all_append() {
 
 INSANE_SKIP_${PN} += "installed-vs-shipped"
 FILES_foothold-headers += "${D}/off-tree-headers"
+PROVIDES += "foothold-headers"

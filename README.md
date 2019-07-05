@@ -8,7 +8,7 @@ _/ ____\____   _____/  |_|  |__   ____ |  |    __| _/
 ```
 A dual ARM A53 QEMU dev board for a kernel playground, built with Yocto.
 
-Copyright (c) 2018 Jani Nurminen \<slinky at iki dot-goes-here fi\>
+Copyright (c) 2018,2019 Jani Nurminen \<slinky at iki dot-goes-here fi\>
 Licensed under the MIT License.
 
 
@@ -40,7 +40,7 @@ Download source code:
 Then you should run `make prepare`. This checks out the stable kernel from
 kernel.org and creates a branch which will be used later.
 
-Note: by default 4.19.3 is used. This is specified by the
+Note: by default 5.1.16 is used. This is specified by the
 KERNEL_BRANCHOFF_VERSION in the Makefile.
 
 ## Simple Usage
@@ -134,7 +134,7 @@ The relevant variables in the Makefile are:
 ```
 
 The KERNEL_BRANCHOFF_VERSION is the Kernel version from which the dev/foothold
-is made off, by default it is 4.19.3.
+is made off, by default it is 5.1.16.
 
 
 ### make image

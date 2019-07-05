@@ -12,6 +12,7 @@ IMAGE_FEATURES_append = " package-management"
 EXTRA_IMAGE_FEATURES = "empty-root-password"
 EXTRA_IMAGE_FEATURES_append = " allow-empty-password"
 EXTRA_IMAGE_FEATURES_append = " ssh-server-dropbear"
+EXTRA_IMAGE_FEATURES_append = " allow-root-login"
 EXTRA_IMAGE_FEATURES_append = " dbg-pkgs"
 
 IMAGE_INSTALL_append = " base-files"

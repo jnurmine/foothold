@@ -15,9 +15,9 @@ inherit autotools
 S = "${WORKDIR}/git"
 B = "${S}"
 
-DEPENDS_${PN} = "bison-native flex-native foothold-headers virtual/kernel"
+DEPENDS = "bison-native flex-native foothold-headers virtual/kernel"
 
-PROVIDES_${PN} = "ply"
+PROVIDES = "ply"
 
 SRC_URI += "file://0001-Don-t-build-man-pages.patch"
 

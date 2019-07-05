@@ -1,8 +1,8 @@
 [submodule "poky"]
 	path = poky
 	url = git://git.yoctoproject.org/poky
-	branch = sumo
+	branch = warrior
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = git://git.openembedded.org/meta-openembedded
-	branch = sumo
+	branch = warrior
