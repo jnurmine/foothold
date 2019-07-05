@@ -21,6 +21,7 @@ IMAGE_INSTALL_append = " ethtool"
 IMAGE_INSTALL_append = " strace"
 IMAGE_INSTALL_append = " perf"
 IMAGE_INSTALL_append = " ply"
+IMAGE_INSTALL_append = " dtc"
 
 # Don't include kernel in rootfs
 RDEPENDS_kernel-base = ""
