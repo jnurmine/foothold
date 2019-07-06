@@ -49,7 +49,7 @@ LINUX_VERSION_EXTENSION_append = "-fh"
 COMPATIBLE_MACHINE = "${MACHINE}"
 PROVIDES_${PN} += "virtual/kernel"
 
-PR = "r1"
+PR = "r2"
 
 # Devicetrees, also make sure QEMU can find our devicetree file
 #
