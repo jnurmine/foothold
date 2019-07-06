@@ -49,6 +49,9 @@ LINUX_VERSION_EXTENSION_append = "-fh"
 COMPATIBLE_MACHINE = "${MACHINE}"
 PROVIDES_${PN} += "virtual/kernel"
 
+KBUILD_BUILD_USER = "root"
+KBUILD_BUILD_HOST = "foothold"
+
 PR = "r2"
 
 # Devicetrees, also make sure QEMU can find our devicetree file
