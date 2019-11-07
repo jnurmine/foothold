@@ -17,6 +17,7 @@ EXTRA_IMAGE_FEATURES_append = " dbg-pkgs"
 
 IMAGE_INSTALL_append = " base-files"
 
+IMAGE_INSTALL_append = " trace-cmd"
 IMAGE_INSTALL_append = " pciutils"
 IMAGE_INSTALL_append = " ethtool"
 IMAGE_INSTALL_append = " strace"
