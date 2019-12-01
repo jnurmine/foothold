@@ -1,0 +1,28 @@
+From a1b4bbf762780c400926d5df2673508042199883 Mon Sep 17 00:00:00 2001
+From: Slinky <slinky@iki.fi>
+Date: Sun, 1 Dec 2019 22:08:51 +0100
+Subject: Increase log size
+
+The default log is too small for newer kernels, increase to 2 MiB.
+
+Signed-off-by: Slinky <slinky@iki.fi>
+---
+ include/ply/syscall.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/ply/syscall.h b/include/ply/syscall.h
+index 1ecba9d..aa2a008 100644
+--- a/include/ply/syscall.h
++++ b/include/ply/syscall.h
+@@ -13,7 +13,7 @@
+ #include <linux/perf_event.h>
+ #include <linux/version.h>
+ 
+-#define LOG_BUF_SIZE 0x20000
++#define LOG_BUF_SIZE 0x200000
+ 
+ extern char bpf_log_buf[LOG_BUF_SIZE];
+ 
+-- 
+2.17.1
+

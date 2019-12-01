@@ -9,7 +9,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 SRC_URI = "git://github.com/wkz/ply"
 SRCREV = "4fca51618bf8648320965f1b4b44dd84274e5626"
 
-PR = "r1"
+PR = "r2"
 
 inherit autotools
 
@@ -21,4 +21,5 @@ DEPENDS = "bison-native flex-native virtual/kernel"
 
 PROVIDES = "ply"
 
-SRC_URI += "file://0001-Don-t-build-man-pages.patch"
+SRC_URI += "file://0001-Don-t-build-man-pages.patch \
+            file://0002-Increase-log-size.patch"
