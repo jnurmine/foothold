@@ -135,6 +135,7 @@ endif
 	@git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git $(KERNEL_GIT_DIR)/linux.git
 	@echo "Checking out $(KERNEL_BRANCHOFF_VERSION)"
 	@git -C $(KERNEL_GIT_DIR)/linux.git checkout -b $(KERNEL_BRANCH) "v$(KERNEL_BRANCHOFF_VERSION)"
+	@rm -f images
 	@ln -s build/tmp/deploy/images/$(MACHINE) images
 	@echo "One-time prepare done!"
 
