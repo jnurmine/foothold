@@ -48,6 +48,7 @@ SRC_URI     = "git://${KERNEL_GIT_DIR}/linux.git;protocol=file;nocheckout=0;useh
 LINUX_VERSION_EXTENSION_append = "-fh"
 COMPATIBLE_MACHINE = "${MACHINE}"
 PROVIDES_${PN} += "virtual/kernel"
+DEPENDS = "rsync-native"
 
 KBUILD_BUILD_USER = "root"
 KBUILD_BUILD_HOST = "foothold"

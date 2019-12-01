@@ -40,7 +40,7 @@ Download source code:
 Then you should run `make prepare`. This checks out the stable kernel from
 kernel.org and creates a branch which will be used later.
 
-Note: by default 5.1.16 is used. This is specified by the
+Note: by default 5.4.1 is used. This is specified by the
 KERNEL_BRANCHOFF_VERSION in the Makefile.
 
 ## Simple Usage
@@ -134,7 +134,7 @@ The relevant variables in the Makefile are:
 ```
 
 The KERNEL_BRANCHOFF_VERSION is the Kernel version from which the dev/foothold
-is made off, by default it is 5.1.16.
+is made off, by default it is 5.4.1.
 
 
 ### make image
@@ -257,7 +257,7 @@ NOTE about kernel headers: you'll be using a non-Yocto kernel, and therefore
 the kernel headers need to come from your kernel, and not the (presumably
 older) kernel shipped with Yocto. This should be as easy as
 ```
-  require conf/off-tree-headers.inc
+  DEPENDS = "virtual/kernel"
 ```
 See the ply_2.1.0.bb for example. That is a good example of a program which
 does not work with e.g. 4.19 if built with the Yocto 4.15.7 kernel headers; for

@@ -38,7 +38,7 @@ QEMU_GDB_PORT ?= 37777
 
 # The Linux kernel knobs
 KERNEL_GIT_DIR ?= $(ROOT_DIR)/kernel
-KERNEL_BRANCHOFF_VERSION ?= 5.1.16
+KERNEL_BRANCHOFF_VERSION ?= 5.4.1
 KERNEL_BRANCH ?= dev/foothold
 
 BUILD_DIR ?= $(ROOT_DIR)/build
